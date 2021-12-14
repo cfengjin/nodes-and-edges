@@ -128,7 +128,7 @@ const RandomGraphPage = () => {
         />
         <RandomGraphDesciption />
       </aside>
-      <Graph nodes={nodes} edges={edges}/>
+      <Graph nodes={nodes} edges={edges} degrees={degrees}/>
     </main>
   )
 }

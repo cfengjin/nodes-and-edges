@@ -39,7 +39,7 @@ const Graph = props => {
           .selectAll("circle")
           .data(props.nodes)
           .join("circle")
-            .attr("fill", d => interpolateViridis(d.id / props.nodes.length))
+            .attr("fill", d => interpolateViridis(props.degrees !== undefined ? props.degrees[d.id] / Math.max(...props.degrees) : (d.id + 1) / props.nodes.length))
             .attr("r", NODE_RADIUS)
             .attr("cx", d => d.x)
             .attr("cy", d => d.y)
