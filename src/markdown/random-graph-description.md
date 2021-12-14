@@ -18,3 +18,25 @@ The mean number of edges $\langle m\rangle$ is just the number of possible edges
 $$
 \langle m\rangle = {n \choose 2}p
 $$
+
+### Mean Degree
+The degree of a node is how many other nodes it's connected to.
+
+$$
+c = \langle k \rangle = \frac{2 \langle m \rangle}{n} = (n - 1) p
+$$
+
+### Clustering Coefficient
+$$
+C = \frac{c}{n - 1}
+$$
+
+### Degree Distribution
+$$
+p_k = {n - 1 \choose k} p^k (1 - p)^{n - 1 - k}
+$$
+
+In the limit of large $n$,
+$$
+p_k = e^{-c}\frac{c^k}{k!}.
+$$

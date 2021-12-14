@@ -44,12 +44,14 @@ const RandomGraphPage = () => {
   let edges = []
   for (let j = 0; j < numNodes; ++j) {
     for (let i = j; i < numNodes; ++i ) {
-      if (i !== j && Math.random() < edgeProb) {
-        edges.push({ source: j, target: i })
-        degrees[i]++
-        degrees[j]++
+      if (i !== j) {
+        if (Math.random() < edgeProb) {
+          edges.push({ source: j, target: i })
+          degrees[i]++
+          degrees[j]++
+        }
+        numPossiblePairs++;
       }
-      numPossiblePairs++;
     }
   }
 
@@ -103,6 +105,8 @@ const RandomGraphPage = () => {
         <p>Expected number of edges: {numPossiblePairs * edgeProb}</p>
         <p>Number of edges: {edges.length}</p>
         <p>Average degree: {averageDegree}</p>
+        <p>Clustering coefficient: {edgeProb}</p>
+        <p>Degree distribution (red: model, blue: data):</p>
         <PlotFigure
           options={
             {
