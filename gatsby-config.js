@@ -4,14 +4,27 @@ module.exports = {
     title: "Nodes And Edges",
   },
   plugins: [
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
+          }
+        ],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: "markdown",
+        path: "./src/markdown/",
       },
-      __key: "pages",
+      __key: "markdown",
     },
   ],
 };
