@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
-import { select, forceManyBody, forceLink, forceSimulation, forceX, forceY, zoom } from 'd3'
+import { select, forceManyBody, forceLink, interpolateViridis, forceSimulation, forceX, forceY, zoom } from 'd3'
 import useWindowSize from "../hooks/useWindowSize"
 
 const sectionStyles = {
@@ -39,6 +39,7 @@ const Graph = props => {
           .selectAll("circle")
           .data(props.nodes)
           .join("circle")
+            .attr("fill", d => interpolateViridis(d.id / props.nodes.length))
             .attr("r", NODE_RADIUS)
             .attr("cx", d => d.x)
             .attr("cy", d => d.y)
@@ -58,8 +59,8 @@ const Graph = props => {
   return (
     <section style={sectionStyles}>
       <svg style={svgStyles} ref={svgRef}>
-        <g ref={nodesRef} />
         <g ref={edgesRef} />
+        <g ref={nodesRef} />
       </svg>
     </section>
   )

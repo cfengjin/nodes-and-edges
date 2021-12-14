@@ -1,0 +1,3 @@
+---
+title: Barabasi-Albert Description
+---
