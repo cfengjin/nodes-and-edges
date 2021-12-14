@@ -108,6 +108,7 @@ const IndexPage = () => {
         <span style={headingAccentStyles}>— a collection of network models.</span>
       </h1>
       <p style={paragraphStyles}>
+        Models are playgrounds for us experiment with different network parameters and see how they affect the structure of the network.
         Pick a model below and play with it!
       </p>
       <ul style={listStyles}>

@@ -18,7 +18,7 @@ const Graph = props => {
   const edgesRef = useRef()
 
   const [width, height] = useWindowSize()
-  const viewBox = [-(width - (18 * 16)) / 2, -height / 2, width - (18 * 16), height]
+  const viewBox = [-(width - (36 * 16)) / 2, -height / 2, width - (36 * 16), height]
 
   useEffect(() => {
     const svg = select(svgRef.current)
@@ -28,7 +28,7 @@ const Graph = props => {
     svg
       .attr("viewBox", viewBox)
 
-    const simulation = forceSimulation(props.nodes)
+    forceSimulation(props.nodes)
       .force("link", forceLink(props.edges))
       .force("charge", forceManyBody())
       .force("x", forceX())
