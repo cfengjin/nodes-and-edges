@@ -78,11 +78,12 @@ const links = [
     badge: true
   },
   {
-    text: "Coming Soon: Barabási–Albert Model",
+    text: "Barabási–Albert Model",
     path: "/barabasi-albert",
     description:
       "The Barabási–Albert model is a preferential attachment model, which describes the formation of networks.",
     color: "#1099A8",
+    badge: true
   },
 //   {
 //     color: "#BC027F",
