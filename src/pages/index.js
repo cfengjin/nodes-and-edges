@@ -75,9 +75,10 @@ const links = [
     description:
       "In this model, the number of nodes and the probability of an edge between any pair of nodes are fixed while other properties are kept random.",
     color: "#E95800",
+    badge: true
   },
   {
-    text: "Barabási–Albert Model",
+    text: "Coming Soon: Barabási–Albert Model",
     path: "/barabasi-albert",
     description:
       "The Barabási–Albert model is a preferential attachment model, which describes the formation of networks.",
