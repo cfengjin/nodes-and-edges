@@ -6,13 +6,17 @@ import RandomGraphDesciption from "../components/RandomGraphDescription"
 import Graph from "../components/Graph"
 
 // styles
+// styles
 const mainStyles = {
   display: "flex",
   width: "100vw",
   height: "100vh",
+  color: "#232129",
+  fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 const asideStyles = {
   minWidth: "36rem",
+  padding: 24,
   overflow: "auto"
 }
 const linkStyle = {

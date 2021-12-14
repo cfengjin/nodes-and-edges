@@ -11,6 +11,7 @@ const svgStyles = {
 }
 
 const NODE_RADIUS = 4
+const FORCE_STRENGTH = -400
 
 const Graph = props => {
   const svgRef = useRef()
@@ -30,7 +31,7 @@ const Graph = props => {
 
     forceSimulation(props.nodes)
       .force("link", forceLink(props.edges))
-      .force("charge", forceManyBody())
+      .force("charge", forceManyBody().strength(FORCE_STRENGTH))
       .force("x", forceX())
       .force("y", forceY())
       .on("tick", () => {
